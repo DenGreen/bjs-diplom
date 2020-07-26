@@ -17,7 +17,7 @@ let balanceReplenishment = (data) => {
         ProfileWidget.showProfile(data.data);
         message = 'Баланс успеншно пополнен';
     }  else {
-        message = 'Ошибка пополнения баланса';
+        message = data.data;
     }
     money.setMessage(data.success, message);
 };
@@ -40,7 +40,7 @@ let addingUser = (data) => {
         requestUser(data);
         message = 'Пользователь успешно добавлен';
     } else {
-        message = 'Ошибка добавления пользователя';
+        message = data.data;
     }
     favorites.setMessage(data.success, message);
 }
